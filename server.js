@@ -13,8 +13,8 @@ const app = express();
 
 //middlewares
 app.use(morgan("dev"));
-app.use(express.json);
-app.use(cors);
+app.use(express.json());
+app.use(cors());
 
 //routes
 app.get("/", (req, res) => {
