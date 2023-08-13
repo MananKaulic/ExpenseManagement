@@ -6,3 +6,29 @@
 .mainContent {
   height: 86.5vh;
 }
+
+.formCenter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+}
+.loginHeader {
+  margin-bottom: 5vh;
+}
+.loginbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  margin: 0%;
+}
+.redirect {
+  margin-top: 0vh;
+}
+.inputs {
+  width: 80%;
+}
