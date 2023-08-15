@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Button, Checkbox, Form, Input, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -16,14 +16,22 @@ const Login = () => {
 
       setloading(false);
       message.success("Logged in successfully");
-      localStorage.setItem("user", JSON.stringify({ ...data, password: "" }));
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ ...data.user, password: "" })
+      );
       navigate("/");
     } catch (error) {
       setloading(false);
       console.log(error);
-      message.error("Invalid email or passoword");
+      message.error("Invalid email or password");
     }
   };
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      navigate("/");
+    }
+  }, [navigate]);
   return (
     <>
       {loading && <Spinner />}
