@@ -93,3 +93,10 @@
   padding: 1vh 1vh 1vh 1vh;
   margin: 2vh 2vh 2vh 2vh;
 }
+.filters {
+  display: flex;
+  flex-direction: row;
+}
+.types {
+  margin-left: 2vh;
+}
